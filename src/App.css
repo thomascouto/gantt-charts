@@ -1,0 +1,320 @@
+/* ─── App Layout ─────────────────────────────────────────────────────────── */
+
+.app {
+  max-width: 100%;
+  min-height: 100vh;
+  background: #0f0f14;
+  color: #cdd6f4;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+.app-header {
+  padding: 40px 32px 20px;
+  text-align: center;
+  border-bottom: 1px solid #1e1e2e;
+}
+
+.app-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #cdd6f4;
+  margin: 0 0 8px;
+  letter-spacing: -0.5px;
+}
+
+.app-subtitle {
+  color: #7f849c;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* ─── Tab Navigation ─────────────────────────────────────────────────────── */
+
+.tab-nav {
+  display: flex;
+  gap: 4px;
+  padding: 16px 32px;
+  border-bottom: 1px solid #1e1e2e;
+  background: #11111b;
+  overflow-x: auto;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  border: 1px solid #313244;
+  border-radius: 8px;
+  background: transparent;
+  color: #7f849c;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  color: #cdd6f4;
+  border-color: #45475a;
+  background: #1e1e2e;
+}
+
+.tab-btn.active {
+  color: var(--tab-color, #cba6f7);
+  border-color: var(--tab-color, #cba6f7);
+  background: color-mix(in srgb, var(--tab-color, #cba6f7) 10%, transparent);
+}
+
+/* ─── Tab Content ────────────────────────────────────────────────────────── */
+
+.tab-content {
+  padding: 0;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  color: #7f849c;
+  font-size: 16px;
+}
+
+/* ─── Demo Container ─────────────────────────────────────────────────────── */
+
+.demo-container {
+  padding: 24px 32px 32px;
+}
+
+.demo-header {
+  margin-bottom: 20px;
+}
+
+.demo-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #cdd6f4;
+  margin: 0 0 10px;
+}
+
+.demo-info {
+  margin-bottom: 16px;
+}
+
+.demo-desc {
+  color: #7f849c;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+/* ─── Badges ─────────────────────────────────────────────────────────────── */
+
+.demo-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.badge-green { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+.badge-blue { background: rgba(99, 102, 241, 0.15); color: #818cf8; }
+.badge-purple { background: rgba(168, 85, 247, 0.15); color: #c084fc; }
+.badge-orange { background: rgba(249, 115, 22, 0.15); color: #fb923c; }
+.badge-gray { background: rgba(148, 163, 184, 0.15); color: #94a3b8; }
+.badge-yellow { background: rgba(234, 179, 8, 0.15); color: #facc15; }
+
+/* ─── Controls ───────────────────────────────────────────────────────────── */
+
+.demo-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.demo-controls label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #7f849c;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.demo-controls input[type="checkbox"] {
+  accent-color: #6366f1;
+}
+
+.control-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-group {
+  display: flex;
+  gap: 2px;
+  flex-wrap: wrap;
+}
+
+.btn-group button {
+  padding: 6px 12px;
+  border: 1px solid #313244;
+  background: #1e1e2e;
+  color: #7f849c;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn-group button:first-child { border-radius: 6px 0 0 6px; }
+.btn-group button:last-child { border-radius: 0 6px 6px 0; }
+.btn-group button:only-child { border-radius: 6px; }
+
+.btn-group button:hover {
+  background: #313244;
+  color: #cdd6f4;
+}
+
+.btn-group button.active {
+  background: #6366f1;
+  border-color: #6366f1;
+  color: #fff;
+}
+
+/* ─── Gantt Wrapper ──────────────────────────────────────────────────────── */
+
+.gantt-wrapper {
+  border: 1px solid #1e1e2e;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 16px;
+}
+
+/* ─── Event Log ──────────────────────────────────────────────────────────── */
+
+.event-log {
+  background: #11111b;
+  border: 1px solid #1e1e2e;
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+
+.event-log h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #7f849c;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 10px;
+}
+
+.log-entries {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 12px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.log-empty {
+  color: #45475a;
+  font-style: italic;
+}
+
+.log-entry {
+  padding: 4px 0;
+  color: #a6adc8;
+  border-bottom: 1px solid #181825;
+}
+
+.log-entry:last-child {
+  border-bottom: none;
+}
+
+/* ─── Frappe Gantt Overrides ─────────────────────────────────────────────── */
+
+.gantt-wrapper .gantt-container {
+  overflow-x: auto;
+}
+
+/* ─── gantt-task-react Overrides ─────────────────────────────────────────── */
+
+.gantt-task-react-wrapper {
+  padding: 0;
+}
+
+.gantt-task-react-wrapper ._1nBOt {
+  font-family: "Inter", system-ui, sans-serif !important;
+}
+
+/* ─── SVAR Gantt Overrides ───────────────────────────────────────────────── */
+
+.svar-gantt-wrapper {
+  padding: 0;
+}
+
+/* ─── DHTMLX Gantt Overrides ─────────────────────────────────────────────── */
+
+.dhtmlx-gantt-wrapper {
+  padding: 0;
+}
+
+.dhtmlx-gantt-wrapper .gantt_container {
+  border: none !important;
+}
+
+.today-marker {
+  background: #6366f1;
+  opacity: 0.4;
+}
+
+.today-marker .gantt_marker_content {
+  font-size: 11px;
+  color: #6366f1;
+}
+
+.milestone-task .gantt_task_content {
+  font-weight: 700;
+}
+
+.completed-task .gantt_task_progress {
+  background: #10b981 !important;
+}
+
+.in-progress-task .gantt_task_progress {
+  background: #f59e0b !important;
+}
+
+/* ─── Scrollbar Styling ──────────────────────────────────────────────────── */
+
+.gantt-wrapper ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.gantt-wrapper ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.gantt-wrapper ::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+.gantt-wrapper ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
